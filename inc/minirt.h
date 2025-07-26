@@ -6,12 +6,14 @@
 /*   By: vlopatin <vlopatin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 19:13:07 by vlopatin          #+#    #+#             */
-/*   Updated: 2025/07/07 14:45:25 by vlopatin         ###   ########.fr       */
+/*   Updated: 2025/07/26 15:11:05 by vlopatin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MINIRT_H
 # define MINIRT_H
+
+# include <assert.h>
 
 //System includes.
 # include <math.h>
@@ -42,8 +44,8 @@
 # define M_PI			3.14159265358979323846
 # define EPSILON		0.0001
 # define EPS_ORIENT		0.1
-# define WIDTH			400
-# define HEIGHT			400
+# define WIDTH			600
+# define HEIGHT			600
 # define MALLOC			"Memory allocation failed"
 # define PARSING		"Exit, parsing failure."
 # define SHAPE			"Unreachable code: shape unrecognized."

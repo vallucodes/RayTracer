@@ -6,7 +6,7 @@
 /*   By: vlopatin <vlopatin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 19:11:47 by vlopatin          #+#    #+#             */
-/*   Updated: 2025/07/07 15:13:38 by vlopatin         ###   ########.fr       */
+/*   Updated: 2025/07/26 15:13:26 by vlopatin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,3 @@ int	main(int ac, char **av)
 	cleanup(&minirt);
 	return (0);
 }
-
-//todo
-
-// unit vector checker not correct

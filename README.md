@@ -46,8 +46,6 @@ Now pull request is possible with no conflicts.
 
 
 
-
-
 If you accidentally started WORK IN MAIN but havent done git add, you can just create branch from current situation:
 git checkout -b your_new_branch_name
 

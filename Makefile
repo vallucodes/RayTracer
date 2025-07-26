@@ -3,12 +3,13 @@ NAME = miniRT
 
 # compile and link
 CC = cc
-CFLAGS = -O3 -flto -march=native -ffast-math -funroll-loops #-Wall -Wextra -Werror
+CFLAGS = -O3 -flto -Wall -Wextra -Werror -march=native -ffast-math -funroll-loops
+#Leaving optimisations disabled for debugging
+# CFLAGS = -g -O0 -Wall -Wextra -Werror
 
 # libft specifics
 MLX_DIR		= ./lib/MLX42
 MLX			= $(MLX_DIR)/build/libmlx42.a
-
 LIBFTDIR	= lib/libft/
 LIBFT		= $(LIBFTDIR)libft.a
 

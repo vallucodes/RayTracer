@@ -1,6 +1,7 @@
 miniRT
 minirt
 .vscode
+.clangd
 
 # Prerequisites
 *.d
