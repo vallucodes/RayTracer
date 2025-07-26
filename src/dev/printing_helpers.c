@@ -172,3 +172,14 @@ void fun_test_parsed_output(char **av, t_parse *ps)
 		c++;
 	}
 }
+
+void	print_total_times()
+{
+	printf("%-15s %15s %15s\n", "Part", "Time (s)", "Percent (%)");
+	printf("%-15s %15.6f\n", "Rendering total", total_time_rendering);
+	printf("%-15s %15.6f %14d %%\n", "Intersections", total_time_intersections, (int)(total_time_intersections / total_time_rendering * 100));
+	printf("%-15s %15.6f %14d %%\n", "Hits", total_time_hits, (int)(total_time_hits / total_time_rendering * 100));
+	printf("%-15s %15.6f %14d %%\n", "IsShadowed", total_time_isShadowed, (int)(total_time_isShadowed / total_time_rendering * 100));
+	printf("%-15s %15.6f %14d %%\n", "Shading", total_time_shading, (int)(total_time_shading / total_time_rendering * 100));
+	printf("%-15s %15.6f %14d %%\n", "Inverse matrix", total_time_invM, (int)(total_time_invM / total_time_rendering * 100));
+}

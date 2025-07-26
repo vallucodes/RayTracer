@@ -6,7 +6,7 @@
 /*   By: vlopatin <vlopatin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 19:11:47 by vlopatin          #+#    #+#             */
-/*   Updated: 2025/07/26 15:13:26 by vlopatin         ###   ########.fr       */
+/*   Updated: 2025/07/26 16:08:51 by vlopatin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int	main(int ac, char **av)
 {
 	t_minirt	minirt;
+	double		start, end;
 
 	if (ac != 2)
 	{
@@ -30,7 +31,11 @@ int	main(int ac, char **av)
 	file_check(av, minirt.world);
 	if (!parsing_gateway(minirt.world))
 		exit_error(&minirt, NULL);
+	start = get_time_sec();
 	render_world(&minirt);
+	end = get_time_sec();
+	total_time_rendering += end - start;
+	print_total_times();
 	mlx_loop_hook(minirt.mlx, &ft_keyhook, &minirt);
 	mlx_loop(minirt.mlx);
 	cleanup(&minirt);

@@ -6,14 +6,12 @@
 /*   By: vlopatin <vlopatin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 19:13:07 by vlopatin          #+#    #+#             */
-/*   Updated: 2025/07/26 15:11:05 by vlopatin         ###   ########.fr       */
+/*   Updated: 2025/07/26 16:11:33 by vlopatin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MINIRT_H
 # define MINIRT_H
-
-# include <assert.h>
 
 //System includes.
 # include <math.h>
@@ -36,6 +34,7 @@
 # include "parsing.h"
 # include "raytracing.h"
 # include "dev.h"
+# include "performance.h"
 
 //Constant defines
 /**

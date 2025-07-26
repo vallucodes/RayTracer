@@ -17,6 +17,7 @@ void	print_colour(t_color c);
 void	print_comps(t_comps *comps);
 void	print_camera(t_camera *cam);
 void	fun_test_parsed_output(char **av, t_parse *ps);
+void	print_total_times();
 
 //dev
 float	**create_matrix(size_t size, int flag);

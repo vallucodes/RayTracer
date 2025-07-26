@@ -6,7 +6,7 @@
 /*   By: vlopatin <vlopatin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 19:08:36 by vlopatin          #+#    #+#             */
-/*   Updated: 2025/07/03 19:08:37 by vlopatin         ###   ########.fr       */
+/*   Updated: 2025/07/26 16:27:17 by vlopatin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ t_matrix4	inverse_matrix(t_matrix4 m, bool *success)
 	t_matrix4		m2;
 	t_matrix_ctx	ctx;
 
+	double start = get_time_sec();
 	ctx.m = m;
 	ctx.size = 4;
 	matrix_fill_zero(&m2);
@@ -57,6 +58,8 @@ t_matrix4	inverse_matrix(t_matrix4 m, bool *success)
 		}
 		i++;
 	}
+	double end = get_time_sec();
+	total_time_invM += end - start;
 	return (*success = true, m2);
 }
 

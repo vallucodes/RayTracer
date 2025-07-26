@@ -6,7 +6,7 @@
 /*   By: vlopatin <vlopatin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 19:08:25 by vlopatin          #+#    #+#             */
-/*   Updated: 2025/07/26 15:11:52 by vlopatin         ###   ########.fr       */
+/*   Updated: 2025/07/26 16:12:41 by vlopatin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,13 +48,32 @@ t_color	color_at(t_minirt *minirt, t_ray r)
 	t_comps	comps;
 	bool	in_shadow;
 	t_color	color_var;
+	double	start;
+	double	end;
 
+	start = get_time_sec();
 	xs = intersect_world(minirt, r);
+	end = get_time_sec();
+	total_time_intersections += end - start;
+
+	start = get_time_sec();
 	hit_p = hit(&xs, NULL);
+	end = get_time_sec();
+	total_time_hits += end - start;
+
 	if (hit_p.object == NULL)
 		return (color(0, 0, 0));
 	comps = prepare_computations(minirt, hit_p, r);
+
+	start = get_time_sec();
 	in_shadow = is_shadowed(minirt, comps.over_point, hit_p.object);
+	end = get_time_sec();
+	total_time_isShadowed += end - start;
+
+	start = get_time_sec();
 	color_var = shade_hit(minirt, comps, in_shadow);
+	end = get_time_sec();
+	total_time_shading += end - start;
+
 	return (color_var);
 }
