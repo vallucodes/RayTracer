@@ -6,7 +6,7 @@
 /*   By: vlopatin <vlopatin@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/03 19:13:07 by vlopatin          #+#    #+#             */
-/*   Updated: 2025/07/04 16:38:58 by vlopatin         ###   ########.fr       */
+/*   Updated: 2025/07/12 15:59:55 by vlopatin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@
 # define M_PI			3.14159265358979323846
 # define EPSILON		0.0001
 # define EPS_ORIENT		0.1
-# define WIDTH			400
-# define HEIGHT			400
+# define WIDTH			600
+# define HEIGHT			600
 # define MALLOC			"Memory allocation failed"
 # define PARSING		"Exit, parsing failure."
 # define SHAPE			"Unreachable code: shape unrecognized."
