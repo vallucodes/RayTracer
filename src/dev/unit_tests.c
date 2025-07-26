@@ -810,7 +810,7 @@ void	test_ray_for_pixel(t_minirt *minirt)
 	print_ray(r);
 }
 
-void	test_shape(t_minirt *minirt)
+void	test_shape()
 {
 	t_scene_obj object;
 	t_matrix4 trans;
