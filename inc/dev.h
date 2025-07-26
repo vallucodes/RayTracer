@@ -40,7 +40,7 @@ void	test_camera(t_minirt *minirt);
 void	test_ray_for_pixel(t_minirt *minirt);
 void	test_intersect_two_spheres(t_minirt *minirt);
 void	print_colour(t_color c);
-void	test_shape(t_minirt *minirt);
+void	test_shape();
 void	test_intersect_generic(void);
 void	test_plane_normal(t_minirt *minirt);
 void	test_plane_intersect(t_minirt *minirt);
