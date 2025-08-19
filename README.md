@@ -1,62 +1,60 @@
 # miniRT
-Mini raytracing
 
+## 📌 Overview
 
-Useful link
+MiniRT is a simple raytracing engine that renders 3D scenes with basic shapes, lighting and camera control.
 
-tutorial
-https://www.youtube.com/watch?v=E6e_hQ5LQDE
+## 🌟 Features
 
+- **Objects supported**: Sphere, plane, cylinder
+- **Transformation**: Objects can translated, rotated and scaled
+- **Ambient light**: Color and brightness
+- **Light**: Position and brightness
+- **Camera**: Position, direction and field of view
 
+## ▶️ Run
 
+### Compilation
+```bash
+git clone https://github.com/vallucodes/miniRT.git
+cd miniRT
+make
+```
+### Run
+```bash
+./miniRT scenes/room.rt
+```
 
-extension
-GitLens
+## ⏩ Scene file setup
 
-CREATE BRANCH:
+Example scene file found in ./scenes/multi-objects2.rt
 
-git branch
+### 🔆 Lighting Elements
+```bash
+A <brightness_ratio> <color>								# Ambient light
+L <position> <brightness_ratio>								# Point light
+```
 
-if not in main:
+### 👁️ Camera Setup
+```bash
+C <position> <direction> <field_of_view>					# Viewpoint definition
+```
 
-git checkout main
-git checkout -b <my_branch_name>
-git add, commit, push
+### 🎯 Scene Objects
+```bash
+pl <position> <normal_vector> <color>						# Plane
+sp <position> <diameter> <color>							# Sphere
+cy <position> <axis_direction> <diameter> <height> <color>	# Cylinder
+```
 
+## 🛠️ Technical Implementation
 
-
-MERGE YOUR BRANCH stuff to main:
-After git push, go to github and press create pull request, accept everything.
-If there are merge conflicts there, cancel that. You need to merge latest main
-version to your branch before that and solve the conflicts:
-
-make sure you are in your branch
-get last main version:
-git checkout main
-git pull
-git checkout your_branch
-git merge main
-Then you have to solve conflicts by keeping incoming version, your version or both.
-All conflicts are showed in vscode with red exclamation mark next to filename.
-After selecting in code what to keep, you have to press somwhere at bottom right
-something like "accept changes" or "solve conflicts".
-After all solved
-git add, commit, push.
-Now pull request is possible with no conflicts.
-
-
-
-If you accidentally started WORK IN MAIN but havent done git add, you can just create branch from current situation:
-git checkout -b your_new_branch_name
-
-
-If you want to GO BACK in commits and It's ok to lose current progress:
-git reset --hard <commit-hash>
-
-If you want to GO BACK in commits and It's NOT ok to lose current progress:
-git checkout <commit-hash>
-git checkout -b <new-branch-name>
-
-Get latest information about branches to gitlens without pulling anything:
-git fetch
-
+| Component   | Details   |
+|-----|----------|
+| Parsing | Custom parser for `.rt` input file into meaningful data |
+| Library | Use MLX42 library to create the window and render the given image |
+| Math | 3D vector and matrix manipulation library |
+| Intersections | Keep all the objects in origo, inverse transformation matrix applied to ray. Use math equations to calulate intersections |
+| Light model | Object reflection based on Phong illumation model: sum of ambient, diffuse and specular light components |
+| Shading computation | Cast ray from hit of the object to lightsource to detect any occlusion |
+| Camera | 3D camera placement and directions setup |
