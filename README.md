@@ -25,7 +25,7 @@ make
 ./miniRT scenes/room.rt
 ```
 
-## ⏩ Scene file setup
+## 🎬 Scene file setup
 
 Example scene file found in ./scenes/multi-objects2.rt
 
@@ -54,7 +54,19 @@ cy <position> <axis_direction> <diameter> <height> <color>	# Cylinder
 | Parsing | Custom parser for `.rt` input file into meaningful data |
 | Library | Use MLX42 library to create the window and render the given image |
 | Math | 3D vector and matrix manipulation library |
+| Raytracing | Cast ray from view position into world through the viewport|
 | Intersections | Keep all the objects in origo, inverse transformation matrix applied to ray. Use math equations to calulate intersections |
 | Light model | Object reflection based on Phong illumation model: sum of ambient, diffuse and specular light components |
 | Shading computation | Cast ray from hit of the object to lightsource to detect any occlusion |
 | Camera | 3D camera placement and directions setup |
+
+## 📸 Images
+
+![](imgs/submarine.png)
+![](imgs/pokeball.png)
+![](imgs/snowman.png)
+
+## 👥 Creators
+
+- [Vladimir Lopatinski](https://github.com/vallucodes)
+- [Eric Lehtonen](https://github.com/el-kittiwake)
