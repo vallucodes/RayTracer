@@ -16,13 +16,13 @@ MiniRT is a simple raytracing engine that renders 3D scenes with basic shapes, l
 
 ### Compilation
 ```bash
-git clone https://github.com/vallucodes/miniRT.git
-cd miniRT
+git clone https://github.com/vallucodes/RayTracer.git
+cd RayTracer
 make
 ```
 ### Run
 ```bash
-./miniRT scenes/room.rt
+./RayTracer scenes/room.rt
 ```
 
 ## 🎬 Scene file setup
